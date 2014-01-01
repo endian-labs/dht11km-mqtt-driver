@@ -2,7 +2,7 @@
 
 DHT11 is an inexpensive temperature and humidity sensor. 
 
-This Python script will poll data from a DHT11 attached to a Raspberry Pi using the [dht11km](http://www.tortosaforum.com/raspberrypi/dht11driver.htm) and publish it to an MQTT broker. 
+This Python script will poll data from a DHT11 attached to a Raspberry Pi using the [dht11km](http://www.tortosaforum.com/raspberrypi/dht11driver.htm) device driver and publish it to an MQTT broker. 
 
 ## Installation
 
