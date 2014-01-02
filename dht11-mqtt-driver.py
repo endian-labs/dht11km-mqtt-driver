@@ -2,6 +2,7 @@
 
 from collections import deque
 import json
+import time
 
 import argh
 import paho.mqtt.client
@@ -58,12 +59,14 @@ class Driver(object):
         print('caching data...')
         filter_list = deque()
         while len(filter_list) < 10:
+            time.sleep(1)
             temperature, humidity = read_device_node(self.device)
             if not temperature is None:
                 filter_list.append(temperature)
 
         print('publishing data...')
         while True:
+            time.sleep(30)
             temperature, humidity = read_device_node(self.device)
             if not temperature is None and self.connected:
 
